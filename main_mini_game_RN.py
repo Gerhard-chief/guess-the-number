@@ -1,7 +1,10 @@
 import random
 secret = random.randint(1, 10)
 while True:
-    guess = input("I thought of a number between 1 and 10. Try to guess: ")
+    guess = input("I thought of a number between 1 and 10. Try to guess (enter q to exit): ").strip()
+    if guess.lower() == 'q':
+             print('Bye!')
+             break
     try:
         guess = int(guess)
         if guess > secret:
